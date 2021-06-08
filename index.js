@@ -34,5 +34,5 @@ function validateForm() {
         return false;
     }
     var data = document.getElementById("formData");
-    data.innerText = 
+    data.innerText = item.toString(); 
 }
