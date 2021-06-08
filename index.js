@@ -29,4 +29,6 @@ function validateForm() {
         alert("Date must be filled out");
         return false;
     }
+    var data = document.getElementById("formData");
+    
 }
