@@ -16,7 +16,7 @@ function validateForm() {
     var price = document.forms["myForm"]["price"].value;
     var description = document.forms["myForm"]["description"].value;
     var date = document.forms["myForm"]["date"].value;
-    let item = ItemListing(fullName, price, description, date);
+    let item = new ItemListing(fullName, price, description, date);
     if (item.fullName == "") {
         alert("Name must be filled out");
         return false;
@@ -33,6 +33,9 @@ function validateForm() {
         alert("Date must be filled out");
         return false;
     }
+     displayData(item);
+}
+function displayData(Item) {
     var data = document.getElementById("formData");
-    data.innerText = item.toString(); 
+    data.innerText = item.toString();
 }
