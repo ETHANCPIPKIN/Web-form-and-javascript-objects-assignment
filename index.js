@@ -5,6 +5,10 @@ class ItemListing {
         this.description = 'description';
         this.date = 'date'; 
     }
+
+    toString() {
+        return "Name: " + this.fullName + "\nPrice: " + this.price + "\nDesc: " + this.description + "\nDate: " + this.date; 
+    }
 }
 
 function validateForm() {
@@ -30,5 +34,5 @@ function validateForm() {
         return false;
     }
     var data = document.getElementById("formData");
-    
+    data.innerText = 
 }
