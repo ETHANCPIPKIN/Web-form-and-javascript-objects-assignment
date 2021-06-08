@@ -21,21 +21,24 @@ function validateForm() {
         alert("Name must be filled out");
         return false;
     }
-    if (item.price == "") {
+    else if (item.price == "") {
         alert("Price must be filled out");
         return false;
     }
-    if (item.description == "") {
+    else if (item.description == "") {
         alert("Description must be filled out");
         return false;
     }
-    if (item.date == "") {
+    else if (item.date == "") {
         alert("Date must be filled out");
         return false;
     }
-     displayData(item);
+     else {
+        displayData(item);
+        return true; 
+     }
 }
-function displayData(Item) {
+function displayData(item) {
     var data = document.getElementById("formData");
     data.innerText = item.toString();
 }
